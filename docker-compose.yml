@@ -1,0 +1,9 @@
+version: '2'
+services:
+  ublox-rtcm3:
+    image: rtklib-ubx
+    build: .
+    ports:
+      - "8020:8020"
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"
